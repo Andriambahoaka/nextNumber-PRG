@@ -46,5 +46,16 @@ public class Bean {
    public String afficher() {
       return "affichage_3?nb=" + nombre + "&amp;faces-redirect=true";
    }
+   
+     /**
+   * Retourne une valeur pour une navigation.
+   * @param base
+   * @param numEx
+   * @param query
+   * @return 
+   */
+  public String actionString(String base, String numEx, String query) {
+    return base + "__" + numEx + (query != "" ? "?" + query : "");
+  }
 
 }
